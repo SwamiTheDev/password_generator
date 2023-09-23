@@ -1,5 +1,6 @@
 /* Import Google font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+ 
 * {
   margin: 0;
   padding: 0;
@@ -11,11 +12,20 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #4285f4;
+  background:
+    url(https://source.unsplash.com/E8Ufcyxz514/2400x1823)
+    center / cover no-repeat fixed;
+}
+@keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
 }
 .container {
    width: 60%; 
-  background: #fff;
+   background-color: rgba(255, 255, 255, 0.45);
+   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+ 
+   backdrop-filter: blur(200px);
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
@@ -55,11 +65,11 @@ body {
 }
 .wrapper .pass-indicator {
   width: 100%;
-  height: 4px;
+  height: 10px;
   position: relative;
   background: #dfdfdf;
-  margin-top: 0.75rem;
-  border-radius: 25px;
+  margin-top: 1rem;
+  border-radius: 15px;
 }
 .pass-indicator::before {
   position: absolute;
@@ -71,15 +81,18 @@ body {
 }
 .pass-indicator#weak::before {
   width: 20%;
-  background: #e64a4a;
+  background-color: #f00;
+  filter: drop-shadow(0 0 5px#f00);
 }
 .pass-indicator#medium::before {
   width: 50%;
-  background: #f1c80b;
+  background-color: #eedc3d;
+  filter: drop-shadow(0 0 5px#eedc3d);
 }
 .pass-indicator#strong::before {
   width: 100%;
-  background: #4285f4;
+  background-color: #18e605;
+  filter: drop-shadow(0 0 5px#18e605);
 }
 .wrapper .pass-length {
   margin: 1.56rem 0 1.25rem;
