@@ -14,7 +14,7 @@ body {
   background: #4285f4;
 }
 .container {
-  width: 450px;
+   width: 60%; 
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
@@ -132,4 +132,11 @@ body {
   border-radius: 5px;
   text-transform: uppercase;
   margin: 0.94rem 0 1.3rem;
+}
+
+@media only screen and (max-width: 550px) {
+    .container{
+        /* border:2px red solid !important; */
+        width: 80% !important; 
+    }
 }
